@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+  <title>Form Names</title>
+</head>
+<body>
+<h1>Form Names</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Form Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="formName : ${formNames}">
+    <td th:text="${formName}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

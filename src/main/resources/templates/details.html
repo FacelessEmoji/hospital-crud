@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Person Details</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+</head>
+<body>
+<h1>Person Details</h1>
+<p class="center" th:text="${details}"></p>
+<div class="center">
+    <a class="button" th:href="@{'/people/edit/' + ${person.id}}">Back to Edit</a>
+</div>
+</body>
+</html>

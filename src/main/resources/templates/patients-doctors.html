@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+  <title>Пациенты</title>
+</head>
+<body>
+<h1>Пациенты и номер лицензии врача</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Имя</th>
+    <th>Фамилия</th>
+    <th>Номер Лицензии</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="data : ${patientsDoctorsData}">
+    <td th:text="${data[0]}"></td>
+    <td th:text="${data[1]}"></td>
+    <td th:text="${data[2]}"></td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="center">
+  <a class="button" href="/main">Back</a>
+</div>
+</body>
+</html>

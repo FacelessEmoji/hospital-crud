@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+  <title>Main</title>
+</head>
+<body>
+<h1>Веб-приложение для курсовой работы на тему "Больница"</h1>
+<h2>Таблицы</h2>
+<div class="center">
+  <a class="button" href="/people">Люди</a>
+</div>
+<div class="center">
+  <a class="button" href="/contacts">Контакты</a>
+</div>
+<div class="center">
+  <a class="button" href="/patients">Пациенты</a>
+</div>
+<div class="center">
+  <a class="button" href="/doctors">Врачи</a>
+</div>
+<h2>Примеры сложных select-запросов:</h2>
+  <form action="/specializations" method="get">
+    <div class="center" style="margin-bottom: 10px;">
+      <label for="hospitalId">Выберите ID Больницы:</label>
+      <input type="number" name="hospitalId" min="1" max="2" required>
+    </div>
+    <div class="center">
+      <input type="submit" value="Посмотреть специализации врачей">
+    </div>
+  </form>
+<form action="/contactPhones" method="get">
+  <div class="center" style="margin-bottom: 10px;">
+    <label for="insuranceNumber">Введите номер страхового полиса:</label>
+    <input type="text" name="insuranceNumber" required>
+  </div>
+  <div class="center">
+    <input type="submit" value="Посмотреть номера телефонов">
+  </div>
+</form>
+<form action="/formnames" method="get">
+  <div class="center" style="margin-bottom: 10px;">
+    <label for="prescriptionId">Выберите ID Рецепта:</label>
+    <input type="number" name="prescriptionId" min="1" required>
+  </div>
+  <div class="center">
+    <input type="submit" value="Посмотреть имена форм">
+  </div>
+</form>
+<form action="/patients-doctors" method="get">
+  <div class="center" style="margin-bottom: 10px;">
+    <label for="diagnosisName">Введите название диагноза:</label>
+    <input type="text" name="diagnosisName" required>
+  </div>
+  <div class="center">
+    <input type="submit" value="Посмотреть пациентов и врачей">
+  </div>
+</form>
+<form action="/medicines" method="get">
+  <div class="center" style="margin-bottom: 10px;">
+    <label for="hospitalName">Название больницы:</label>
+    <input type="text" name="hospitalName" required>
+  </div>
+
+  <div class="center">
+    <label for="specializationName">Специальность врача:</label>
+    <input type="text" name="specializationName" required>
+  </div>
+
+  <div class="center">
+    <label for="salary">Зарплата более чем:</label>
+    <input type="number" name="salary" required>
+  </div>
+
+  <div class="center">
+    <label for="diagnosisName">Название диагноза:</label>
+    <input type="text" name="diagnosisName" required>
+  </div>
+
+  <div class="center">
+    <input type="submit" value="Узнать назначенные лекарства">
+  </div>
+</form>
+
+</body>
+</html>

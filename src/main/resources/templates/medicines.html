@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+  <title>Лекарства</title>
+</head>
+<body>
+<h1>Лекарства, назначенные с выбранным фильтром</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Лекарства</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="medicine : ${medicines}">
+    <td th:text="${medicine}"></td>
+  </tr>
+  </tbody>
+</table>
+<div class="center">
+  <a class="button" href="/main">Back</a>
+</div>
+</body>
+</html>
